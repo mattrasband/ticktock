@@ -1,0 +1,26 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+  jackson:
+    date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
+
+ticktock:
+  scheduler:
+    cron:
+      "*/30 * * * * *": "cron.second.30"
+      "0 * * * * *": "cron.minute.1"
+      "0 */5 * * * *": "cron.minute.5"
+      "0 */2 * * * *": "cron.minute.2"
+      "0 */10 * * * *": "cron.minute.10"
+      "0 */15 * * * *": "cron.minute.15"
+      "0 */30 * * * *": "cron.minute.30"
+      "0 */45 * * * *": "cron.minute.45"
+      "0 0 * * * *": "cron.hour.1"
+      "0 0 */2 * * *": "cron.hour.2"
+      "0 0 */4 * * *": "cron.hour.4"
+      "0 0 */6 * * *": "cron.hour.6"
+      "0 0 */8 * * *": "cron.hour.8"
+      "0 0 */12 * * *": "cron.hour.12"
+      "0 0 */16 * * *": "cron.hour.16"
+      "0 0 0 * * *": "cron.day.1"
