@@ -2,9 +2,14 @@
 
 Distributed job scheduler, utilizing rabbit.
 
-This is a quick version of the service described in my [medium post](). It's an overly simplistic scheduling system pushing the majority of the work onto workers.
+This is a quick version of the service described in my [medium post](https://medium.com/@matt_rasband/distributed-scheduling-with-rabbit-505ab5e233ae#.ov35006y1). It's an overly simplistic scheduling system pushing the majority of the work onto workers.
 
 This can be implemented easily in your language of choice, though this should eventually have leader election to be HA itself if I can wrap my head around it :).
+
+## Build & Run
+
+    ./mvnw clean package  # or just ./mvnw clean spring-boot:run
+    java -jar target/ticktock.jar
 
 ### Example Job
 
