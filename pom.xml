@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>TickTock: Distributed scheduling with rabbit</name>
+    <name>TickTock: Distributed scheduling with amqp</name>
     <description/>
 
     <developers>
@@ -48,6 +48,11 @@
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -55,11 +60,6 @@
         <defaultGoal>spring-boot:run</defaultGoal>
 
         <plugins>
-            <!--
-            Everything we do is spring-boot based, provided by default. Since
-            we are extending the spring-boot-parent, no need for the repackage
-            goal.
-            -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -71,11 +71,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <!--
-            Generate git.properties, this is used for the docker image tag
-            and the /info route.
-            -->
             <plugin>
                 <groupId>pl.project13.maven</groupId>
                 <artifactId>git-commit-id-plugin</artifactId>
