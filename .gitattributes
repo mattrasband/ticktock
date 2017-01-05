@@ -1,0 +1,3 @@
+# Make GitHub (Linguist) ignore the vendored code (so it knows we are in fact a Java project)
+.mvn/* linguist-vendored
+mvnw* linguist-vendored
