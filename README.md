@@ -4,7 +4,7 @@ Distributed job scheduler, utilizing amqp.
 
 This is a quick version of the service described in my [medium post](https://medium.com/@matt_rasband/distributed-scheduling-with-rabbit-505ab5e233ae#.ov35006y1). It's a simplistic scheduling system that guarantees single delivery for distributed jobs.
 
-Note: ATM, this doesn't do leader election and isn't HA itself (yet).
+This service now supports HA via a simple leader election using a queue to create a semaphore - the implementation may change if network blips expose bigger issues.
 
 ## Build & Run
 

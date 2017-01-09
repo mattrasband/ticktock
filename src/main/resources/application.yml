@@ -2,9 +2,10 @@ spring:
   rabbitmq:
     host: localhost
     port: 5672
+    listener:
+      acknowledge-mode: manual
   jackson:
     date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
-
 ticktock:
   scheduler:
     cron:
